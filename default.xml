@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://github.com/Freescale" name="freescale"/>
+
+  <default remote="yocto" revision="denzil"/>
+
+  <project remote="yocto" name="poky" path="sources/poky"/>
+
+  <project remote="freescale" name="fsl-community-bsp-base" path="sources/base">
+	<copyfile dest="README" src="README"/>
+	<copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project remote="freescale" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="freescale" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+
+</manifest>
