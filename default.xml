@@ -4,17 +4,17 @@
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
 
-  <default remote="yocto" revision="denzil"/>
+  <default remote="freescale" revision="denzil" sync-j="4"/>
 
-  <project remote="yocto" name="poky" path="sources/poky"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="denzil"/>
 
-  <project remote="freescale" name="fsl-community-bsp-base" path="sources/base">
+  <project name="fsl-community-bsp-base" path="sources/base">
 	<copyfile dest="README" src="README"/>
 	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="freescale" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-  <project remote="freescale" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
 </manifest>
