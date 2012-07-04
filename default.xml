@@ -5,11 +5,11 @@
   <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
 
-  <default remote="freescale" revision="denzil" sync-j="4"/>
+  <default remote="freescale" revision="master" sync-j="4"/>
 
-  <project name="poky" path="sources/poky" remote="yocto" revision="denzil"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="master"/>
 
-  <project remote="oe" revision="denzil" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <project name="fsl-community-bsp-base" path="sources/base">
 	<copyfile dest="README" src="README"/>
