@@ -16,7 +16,7 @@
 	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto"/>
   <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
