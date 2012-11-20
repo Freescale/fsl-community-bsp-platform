@@ -7,7 +7,7 @@
 
   <default remote="freescale" revision="master" sync-j="4"/>
 
-  <project name="poky" path="sources/poky" remote="yocto" revision="master"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="danny"/>
 
   <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
 
