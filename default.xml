@@ -8,6 +8,8 @@
   <remote fetch="git://git.openembedded.org" name="oe"/>
 
   <project remote="yocto" revision="master" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+
   <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <project name="fsl-community-bsp-base" path="sources/base">
@@ -15,7 +17,6 @@
 	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="freescale" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto"/>
   <project remote="freescale" revision="master" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="freescale" revision="master" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
