@@ -25,3 +25,25 @@ $: bitbake core-image-minimal
 You can use any directory to host your build.
 
 The source code will be checked out at fsl-community-bsp/sources.
+
+Contributing
+------------
+
+To contribute to this layer you should the patches for review to the
+mailing list.
+
+Mailing list:
+
+    https://lists.yoctoproject.org/listinfo/meta-freescale
+
+Source code:
+    
+    https://github.com/Freescale/fsl-community-bsp-platform
+
+When creating patches, please use something like:
+
+git format-patch -s --subject-prefix='fsl-community-bsp-platform][PATCH' origin
+
+When sending patches, please use something like:
+
+git send-email --to meta-freescale@yoctoproject.org <generated patch>
