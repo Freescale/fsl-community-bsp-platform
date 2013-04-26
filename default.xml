@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <default sync-j="4"/>
-
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git://github.com/Freescale" name="freescale"/>
-  <remote fetch="git://git.openembedded.org" name="oe"/>
-
-  <project remote="yocto" revision="dylan" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="dylan" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-
-  <project remote="oe" revision="dylan" name="meta-openembedded" path="sources/meta-openembedded"/>
-
-  <project remote="freescale" revision="dylan" name="fsl-community-bsp-base" path="sources/base">
-	<copyfile dest="README" src="README"/>
-	<copyfile dest="setup-environment" src="setup-environment"/>
-  </project>
-
-  <project remote="freescale" revision="dylan" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="dylan" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
-
-</manifest>
+<default sync-j="4"></default>
+<remote name="yocto" fetch="git://git.yoctoproject.org"></remote>
+<remote name="freescale" fetch="git://github.com/Freescale"></remote>
+<remote name="oe" fetch="git://git.openembedded.org"></remote>
+<project revision="789b2b7e0cca404ff8ba8ed5ba823d215e6ba5b4" remote="yocto" path="sources/poky" name="poky"></project>
+<project revision="a636606f15061f85746350b75f804d7cc3823ab0" remote="yocto" path="sources/meta-fsl-arm" name="meta-fsl-arm"></project>
+<project revision="8a350e3b4d3431f68d440f9d6ec079fdd1366617" remote="oe" path="sources/meta-openembedded" name="meta-openembedded"></project>
+<project revision="039d83ba98edc0721328cd4c0f517098c459a230" remote="freescale" path="sources/base" name="fsl-community-bsp-base"></project>
+<project revision="5f5a9cfcad223f5a1c623346780510ffcdc012ab" remote="freescale" path="sources/meta-fsl-arm-extra" name="meta-fsl-arm-extra"></project>
+<project revision="724cfb929748f47782dea3b1dc412b028f6f3515" remote="freescale" path="sources/meta-fsl-demos" name="meta-fsl-demos"></project></manifest>
