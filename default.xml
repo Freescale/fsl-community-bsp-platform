@@ -10,7 +10,7 @@
   <project remote="yocto" revision="dylan" name="poky" path="sources/poky"/>
   <project remote="yocto" revision="dylan" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
 
-  <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="dylan" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <project remote="freescale" revision="dylan" name="fsl-community-bsp-base" path="sources/base">
 	<copyfile dest="README" src="README"/>
