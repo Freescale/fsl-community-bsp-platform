@@ -47,3 +47,21 @@ git format-patch -s --subject-prefix='fsl-community-bsp-platform][PATCH' origin
 When sending patches, please use something like:
 
 git send-email --to meta-freescale@yoctoproject.org <generated patch>
+
+Using Development and Testing Branches
+--------------------------------------
+
+Replace the 'repo init' command above with one of the following:
+
+master: for developers
+
+$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master
+
+master-next: for intrepid developers and testers
+
+Patches are typically merged into master-next and then are merged into
+master after a testing and comment period. It's possible that master-next
+has something you want or need. But it's also possible that using
+master-next will break something that was working before. Use with caution.
+
+$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master-next
