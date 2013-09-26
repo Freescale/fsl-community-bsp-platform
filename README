@@ -14,7 +14,7 @@ Download the BSP source:
 $: PATH=${PATH}:~/bin
 $: mkdir fsl-community-bsp
 $: cd fsl-community-bsp
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b dylan
+$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b dora
 $: repo sync
 
 Once this has complete, you will have all you need. To start a build, do:
