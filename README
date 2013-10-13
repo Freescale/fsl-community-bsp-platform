@@ -6,7 +6,7 @@ To get the BSP you need to have `repo` installed and use it as:
 Install the `repo` utility:
 
 $: mkdir ~/bin
-$: curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $: chmod a+x ~/bin/repo
 
 Download the BSP source:
