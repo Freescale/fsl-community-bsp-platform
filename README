@@ -17,7 +17,7 @@ $: repo sync
 
 Once this has complete, you will have all you need. To start a build, do:
 
-$: . ./setup-environment build
+$: source ./setup-environment build
 $: bitbake core-image-minimal
 
 You can use any directory to host your build.
