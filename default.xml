@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <default sync-j="4" revision="dora"/>
-
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
-
-  <project remote="yocto" revision="dora" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="dora" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-
-  <project remote="oe" revision="dora" name="meta-openembedded" path="sources/meta-openembedded"/>
-
-  <project remote="freescale" revision="dora" name="fsl-community-bsp-base" path="sources/base">
-	<copyfile dest="README" src="README"/>
-	<copyfile dest="setup-environment" src="setup-environment"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  
+  <default revision="dora" sync-j="4"/>
+  
+  <project name="fsl-community-bsp-base" path="sources/base" remote="freescale" revision="5dc5a62f485df66179f6436c157746ac1a104aa4" upstream="dora">
+    <copyfile dest="README" src="README"/>
+    <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-
-  <project remote="freescale" revision="dora" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="dora" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
-
+  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="ad7d3b3eb4a52307a1938582c66b8cbd58697532" upstream="dora"/>
+  <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="freescale" revision="1a9cd5ef40580eca705b53b8dcb7b92baa73d293" upstream="dora"/>
+  <project name="meta-fsl-demos" path="sources/meta-fsl-demos" remote="freescale" revision="b2fd63f5171ab0caf8cfc2b2b4369d7ef73a4eaa" upstream="dora"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="513e7ca20ddd0a5c3b649bf292a67c3e0473d3a8" upstream="dora"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="faf8f8660fae26a14578738b642fdeb08bcb9d54" upstream="dora"/>
 </manifest>
