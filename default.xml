@@ -19,5 +19,6 @@
 
   <project remote="freescale" revision="master" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="freescale" revision="master" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="master" name="Documentation" path="sources/Documentation"/>
 
 </manifest>
