@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+
+  <default sync-j="4" revision="daisy"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  
-  <default revision="daisy" sync-j="4"/>
-  
-  <project name="fsl-community-bsp-base" path="sources/base" remote="freescale" revision="914d5d1f9b6b4fd384e3cc1e82bf144efa6425c0" upstream="daisy">
-    <copyfile dest="README" src="README"/>
-    <copyfile dest="setup-environment" src="setup-environment"/>
+
+  <project remote="yocto" revision="daisy" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="daisy" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+
+  <project remote="oe" revision="daisy" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="freescale" revision="daisy" name="fsl-community-bsp-base" path="sources/base">
+	<copyfile dest="README" src="README"/>
+	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="3336ef362109eef14f9e73cdededb43caefedb2f" upstream="daisy"/>
-  <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="freescale" revision="596e44c6166b8978929433b940a3f277fb200120" upstream="daisy"/>
-  <project name="meta-fsl-demos" path="sources/meta-fsl-demos" remote="freescale" revision="27fdb2f2642ecd55d5633bde880dd4c37acd0d42" upstream="daisy"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dca466c074c9a35bc0133e7e0d65cca0731e2acf" upstream="daisy"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="98ad3cb2c0f5975a0df4cebc06775aaae657700d" upstream="daisy"/>
+
+  <project remote="freescale" revision="daisy" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="daisy" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+
 </manifest>
