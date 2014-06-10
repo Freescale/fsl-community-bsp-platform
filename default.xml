@@ -5,7 +5,7 @@
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
-  <remote fetch="http://git.openembedded.org" name="oe"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
 
   <project remote="yocto" revision="dora" name="poky" path="sources/poky"/>
   <project remote="yocto" revision="dora" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
