@@ -17,7 +17,7 @@ $: cd fsl-community-bsp
 $: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b daisy
 $: repo sync
 
-Once this has complete, you will have all you need. To start a build, do:
+Once this has completed, you will have all you need. To start a build, do:
 
 $: source ./setup-environment build
 $: bitbake core-image-minimal
@@ -29,7 +29,7 @@ The source code will be checked out at fsl-community-bsp/sources.
 Contributing
 ------------
 
-To contribute to this layer you should the patches for review to the
+To contribute to this layer you should send the patches for review to the
 mailing list.
 
 Mailing list:
