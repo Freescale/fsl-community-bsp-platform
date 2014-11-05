@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <default sync-j="4" revision="master"/>
-
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
-
-  <project remote="yocto" revision="dizzy" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="dizzy" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-
-  <project remote="oe" revision="dizzy" name="meta-openembedded" path="sources/meta-openembedded"/>
-
-  <project remote="freescale" revision="dizzy" name="fsl-community-bsp-base" path="sources/base">
-	<copyfile dest="README" src="README"/>
-	<copyfile dest="setup-environment" src="setup-environment"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  
+  <default revision="master" sync-j="4"/>
+  
+  <project name="Documentation" path="sources/Documentation" remote="freescale" revision="3f9b1c781893a5901968a75f12a4b6cc4ee57a78" upstream="dizzy"/>
+  <project name="fsl-community-bsp-base" path="sources/base" remote="freescale" revision="89c605386ec81d64b38562acbc66942964fad971" upstream="dizzy">
+    <copyfile dest="README" src="README"/>
+    <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-
-  <project remote="freescale" revision="dizzy" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="dizzy" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
-  <project remote="freescale" revision="dizzy" name="Documentation" path="sources/Documentation"/>
-
+  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="9ee281f30038ab72564dc983d11b1c9818f083de" upstream="dizzy"/>
+  <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="freescale" revision="0bf90932c2775a433a752f8b94a7ec51d1891ab9" upstream="dizzy"/>
+  <project name="meta-fsl-demos" path="sources/meta-fsl-demos" remote="freescale" revision="7a9ba77d90e7f242eb8f3e7e7df697c79ed9ce59" upstream="dizzy"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="9efaed99125b1c4324663d9a1b2d3319c74e7278" upstream="dizzy"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="f3a177cf045b19612b7d2c96889ac24307191c3d" upstream="dizzy"/>
 </manifest>
