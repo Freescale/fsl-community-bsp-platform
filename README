@@ -6,7 +6,7 @@ To get the BSP you need to have `repo` installed and use it as:
 Install the `repo` utility:
 
 $: mkdir ~/bin
-$: curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $: chmod a+x ~/bin/repo
 
 Download the BSP source:
@@ -14,12 +14,12 @@ Download the BSP source:
 $: PATH=${PATH}:~/bin
 $: mkdir fsl-community-bsp
 $: cd fsl-community-bsp
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b dora
+$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b daisy
 $: repo sync
 
-Once this has complete, you will have all you need. To start a build, do:
+Once this has completed, you will have all you need. To start a build, do:
 
-$: . ./setup-environment build
+$: source ./setup-environment build
 $: bitbake core-image-minimal
 
 You can use any directory to host your build.
@@ -29,7 +29,7 @@ The source code will be checked out at fsl-community-bsp/sources.
 Contributing
 ------------
 
-To contribute to this layer you should the patches for review to the
+To contribute to this layer you should send the patches for review to the
 mailing list.
 
 Mailing list:
