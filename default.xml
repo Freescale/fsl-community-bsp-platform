@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+
+  <default sync-j="4" revision="fido"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
-  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  
-  <default revision="fido" sync-j="4"/>
-  
-  <project name="Documentation" path="sources/Documentation" remote="freescale" revision="d074db34df79d1bd12485827e7fe1285f5562f71" upstream="fido"/>
-  <project name="fsl-community-bsp-base" path="sources/base" remote="freescale" revision="89c605386ec81d64b38562acbc66942964fad971" upstream="fido">
-    <copyfile dest="README" src="README"/>
-    <copyfile dest="setup-environment" src="setup-environment"/>
+
+  <project remote="yocto" revision="fido" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="fido" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+
+  <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="freescale" revision="fido" name="fsl-community-bsp-base" path="sources/base">
+	<copyfile dest="README" src="README"/>
+	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="68752031fc843bfba48ee3edbb439b11d2198597" upstream="fido"/>
-  <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="freescale" revision="749d8f9cffd2017457dc4a3a4a7679a050126f74" upstream="fido"/>
-  <project name="meta-fsl-demos" path="sources/meta-fsl-demos" remote="freescale" revision="3e6bb88fd2c184d748eecf6f57c0d87ea39478d8" upstream="fido"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="2080f15e86d3d8e1e1f65e16b014545fe538114c" upstream="master"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="7209c0bb135e0b91f177c2542b7b27a0aa424f54" upstream="fido"/>
+
+  <project remote="freescale" revision="fido" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="fido" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="fido" name="Documentation" path="sources/Documentation"/>
+
 </manifest>
