@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+
+  <default sync-j="4" revision="jethro"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
-  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  
-  <default revision="jethro" sync-j="4"/>
-  
-  <project name="Documentation" path="sources/Documentation" remote="freescale" revision="6f697405c1db4d29013f415f1f567df21a7c781a" upstream="jethro"/>
-  <project name="fsl-community-bsp-base" path="sources/base" remote="freescale" revision="3a9c59399dbcf4790578125f016c6e86aff43367" upstream="jethro">
-    <copyfile dest="README" src="README"/>
-    <copyfile dest="setup-environment" src="setup-environment"/>
+
+  <project remote="yocto" revision="jethro" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="jethro" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+
+  <project remote="oe" revision="jethro" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="freescale" revision="jethro" name="fsl-community-bsp-base" path="sources/base">
+	<copyfile dest="README" src="README"/>
+	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="aa2a6cee58743ca9f437ce3d552504d32519c8f1" upstream="jethro"/>
-  <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="freescale" revision="fd63d86b5a04e9d0e700a47c8d5c56c04e6a0d52" upstream="jethro"/>
-  <project name="meta-fsl-demos" path="sources/meta-fsl-demos" remote="freescale" revision="8bffde8d803dd2362fbded79781ce084d723b048" upstream="jethro"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dc5634968b270dde250690609f0015f881db81f2" upstream="jethro"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="c8e5c38b8a36cbb45831fcd8469bd96068ae300c" upstream="jethro"/>
+
+  <project remote="freescale" revision="jethro" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="jethro" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="jethro" name="Documentation" path="sources/Documentation"/>
+
 </manifest>
