@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+
+  <default sync-j="4" revision="krogoth"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
-  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  
-  <default revision="krogoth" sync-j="4"/>
-  
-  <project name="Documentation" path="sources/Documentation" remote="freescale" revision="f119f2fa516c53422f789d96f6631845ea5848c9" upstream="krogoth"/>
-  <project name="fsl-community-bsp-base" path="sources/base" remote="freescale" revision="3f3f63f5dd6bc62cbe7ea8ba779a07754bec4584" upstream="krogoth">
-    <copyfile dest="README" src="README"/>
-    <copyfile dest="setup-environment" src="setup-environment"/>
+
+  <project remote="yocto" revision="krogoth" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="krogoth" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+
+  <project remote="oe" revision="krogoth" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="freescale" revision="krogoth" name="fsl-community-bsp-base" path="sources/base">
+	<copyfile dest="README" src="README"/>
+	<copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-fsl-arm" path="sources/meta-fsl-arm" remote="yocto" revision="a3a91dc1ef6d1dc42e284248b09dd474ba2cef80" upstream="krogoth"/>
-  <project name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" remote="freescale" revision="698cf389aa446244a39b597fbf58be1d55096500" upstream="krogoth"/>
-  <project name="meta-fsl-demos" path="sources/meta-fsl-demos" remote="freescale" revision="8359d8d7c84ebdc50f685c447d057efbd9bf0666" upstream="krogoth"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="2092396f0e4fd3891b398c7180528aba67e1d522" upstream="krogoth"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="898a78357e72fb80f1f8e26ba90bad5b7b054a4f" upstream="krogoth"/>
+
+  <project remote="freescale" revision="krogoth" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="krogoth" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="krogoth" name="Documentation" path="sources/Documentation"/>
+
 </manifest>
