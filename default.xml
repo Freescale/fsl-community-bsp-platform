@@ -13,8 +13,8 @@
   <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <project remote="freescale" revision="master" name="fsl-community-bsp-base" path="sources/base">
-	<copyfile dest="README" src="README"/>
-	<copyfile dest="setup-environment" src="setup-environment"/>
+	<linkfile dest="README" src="README"/>
+	<linkfile dest="setup-environment" src="setup-environment"/>
   </project>
 
   <project remote="freescale" revision="master" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
