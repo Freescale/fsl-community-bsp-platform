@@ -15,7 +15,7 @@ Download the BSP source:
 $: PATH=${PATH}:~/bin
 $: mkdir fsl-community-bsp
 $: cd fsl-community-bsp
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master
+$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b pyro
 $: repo sync
 
 At the end of the commands you have every metadata you need to start work with.
@@ -23,7 +23,7 @@ At the end of the commands you have every metadata you need to start work with.
 To start a simple image build:
 
 [source,console]
-$: source ./setup-environment build
+$: MACHINE=<machine> DISTRO=<distro> source setup-environment <build directory>
 $: bitbake core-image-minimal
 
 You can use any directory to host your build.
