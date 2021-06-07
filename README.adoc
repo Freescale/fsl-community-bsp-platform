@@ -32,23 +32,10 @@ The source code is checked out at `fsl-community-bsp/sources`.
 
 == Contributing
 
-To contribute to this layer you should send the patches for review to the mailing list.
-
-Mailing list::
-    https://lists.yoctoproject.org/listinfo/meta-freescale
+To contribute to this layer you should send the patches via pull requests.
 
 Source code::
     https://github.com/Freescale/fsl-community-bsp-platform
-
-When creating patches, please use something like:
-
-[source,console]
-$: git format-patch -s --subject-prefix='fsl-community-bsp-platform][PATCH' origin
-
-When sending patches, please use something like:
-
-[source,console]
-$: git send-email --to meta-freescale@yoctoproject.org <generated patch>
 
 == Using Development and Testing Branches
 
