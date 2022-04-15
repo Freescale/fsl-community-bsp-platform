@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <include name="default.xml"/>
+
+  <remote fetch="https://github.com/kraj" name="clang"/>
+  <remote fetch="https://github.com/OSSystems" name="OSSystems"/>
+
+  <project remote="clang" name="meta-clang" path="sources/meta-clang" />
+  <project remote="OSSystems" name="meta-browser" path="sources/meta-browser" />
+
+</manifest>
