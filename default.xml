@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="master"/>
+  <default sync-j="4" revision="kirkstone"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
