@@ -7,6 +7,6 @@
   <remote fetch="https://github.com/OSSystems" name="OSSystems"/>
 
   <project remote="clang" name="meta-clang" path="sources/meta-clang" />
-  <project remote="OSSystems" name="meta-browser" path="sources/meta-browser" />
+  <project remote="OSSystems" name="meta-browser" path="sources/meta-browser" revision="3c81df00f2afbcd646be6aa5346fa16a14d86a6f" />
 
 </manifest>
