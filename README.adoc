@@ -34,6 +34,9 @@ The source code is checked out at `fsl-community-bsp/sources`.
 
 To contribute to this layer you should send the patches for review to the mailing list.
 
+Preferable Method::
+    Using the GitHub Pull Request created from a fork.
+
 Mailing list::
     https://lists.yoctoproject.org/listinfo/meta-freescale
 

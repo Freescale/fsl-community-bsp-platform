@@ -19,6 +19,5 @@
 
   <project remote="freescale" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
   <project remote="freescale" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
-  <project remote="freescale" name="Documentation" path="sources/Documentation"/>
 
 </manifest>
