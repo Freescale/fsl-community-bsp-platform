@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="master"/>
+  <default sync-j="4" revision="whinlatter"/>
 
   <remote fetch="https://git.yoctoproject.org" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
 
-  <project remote="oe" name="bitbake" path="sources/bitbake"/>
+  <project remote="oe" revision="2.16" name="bitbake" path="sources/bitbake"/>
   <project remote="oe" name="openembedded-core" path="sources/openembedded-core"/>
   <project remote="yocto" name="meta-yocto" path="sources/meta-yocto"/>
   
