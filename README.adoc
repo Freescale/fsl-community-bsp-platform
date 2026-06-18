@@ -39,7 +39,17 @@ Source code::
 
 == Using Development and Testing Branches
 
-Replace the `repo init` command above with one of the following:
+Replace the `repo init` command above with one of the supported branches below:
+
+wrynose:: Stable release (recommended), based on the Yocto Project 6.0 LTS
++
+[source,console]
+$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b wrynose
+
+scarthgap:: Long Term Support release, based on the Yocto Project 5.0 LTS, receiving critical updates only
++
+[source,console]
+$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b scarthgap
 
 master:: For developers
 +
